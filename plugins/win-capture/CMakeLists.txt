@@ -15,7 +15,9 @@ set(win-capture_HEADERS
 	graphics-hook-info.h
 	graphics-hook-ver.h
 	window-helpers.h
-	dc-capture.h)
+	dc-capture.h
+	audio-helpers.h
+	audio-hook-info.h)
 
 set(win-capture_SOURCES
 	dc-capture.c
@@ -30,7 +32,9 @@ set(win-capture_SOURCES
 	load-graphics-offsets.c
 	game-capture-file-init.c
 	duplicator-monitor-capture.c
-	plugin-main.c)
+	plugin-main.c
+	audio-capture.c
+	audio-helpers.cpp)
 
 add_library(win-capture MODULE
 	${win-capture_SOURCES}
@@ -48,3 +52,4 @@ install_obs_plugin_with_data(win-capture data)
 add_subdirectory(graphics-hook)
 add_subdirectory(get-graphics-offsets)
 add_subdirectory(inject-helper)
+add_subdirectory(audio-hook)

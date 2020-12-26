@@ -18,6 +18,8 @@
 
 #include <windows.h>
 
+#define IPC_PIPE_BUF_SIZE 1024
+
 struct ipc_pipe_server {
 	OVERLAPPED overlap;
 	HANDLE handle;
